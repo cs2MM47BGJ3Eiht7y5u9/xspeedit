@@ -3,8 +3,6 @@ package org.java;
 import java.util.ArrayList;
 
 import org.java.util.Constant;
-import org.java.util.IllegalWeightException;
-import org.java.util.WeightHelper;
 
 /**
  * A box represents a cardboard box that can be filled up with a specific number of product, see {@link Product}.
@@ -27,9 +25,8 @@ public class Box {
      * Adds a product if the box supports it and returns true if the product was added.
      * @param p product to add to a box.
      * @return true if the product was added.
-     * @throws IllegalWeightException
      */
-    public boolean addProduct(Product p) throws IllegalWeightException {
+    public boolean addProduct(Product p) {
 	boolean ret = false;
 	int productWeight = p.getWeight();
 	int currentWeight = this.getTotalWeight();
@@ -37,7 +34,6 @@ public class Box {
 	if (futureWeight <= Constant.PRODUCT_MAXIMAL_WEIGHT) {
 	    this.products.add(p);
 	    currentWeight = this.getTotalWeight();
-	    WeightHelper.checkWeight(currentWeight, Constant.PRODUCT_MAXIMAL_WEIGHT);
 	    ret = true;
 	}
 	return ret;
