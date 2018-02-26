@@ -1,4 +1,4 @@
-package org.java;
+package org.java.util;
 
 public interface Constant {
     static int MINIMAL_WEIGHT = 1;

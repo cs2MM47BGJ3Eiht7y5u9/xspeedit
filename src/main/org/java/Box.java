@@ -2,6 +2,10 @@ package org.java;
 
 import java.util.ArrayList;
 
+import org.java.util.Constant;
+import org.java.util.IllegalWeightException;
+import org.java.util.WeightHelper;
+
 /**
  * A box represents a cardboard box that can be filled up with a specific number of product, see {@link Product}.
  * A box can contain up to 10, inclusive, weight-unit product. 

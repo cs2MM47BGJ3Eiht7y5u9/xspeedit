@@ -1,7 +1,11 @@
 package org.java;
 
+import org.java.util.Constant;
+import org.java.util.IllegalWeightException;
+import org.java.util.WeightHelper;
+
 /**
- * A product is produced by a chain and weights between 1 and 9 weight-unit.
+ * A product is produced by a producer, see {@link Producer} and weights between 1 and 9 weight-unit.
  * @author auzias
  *
  */

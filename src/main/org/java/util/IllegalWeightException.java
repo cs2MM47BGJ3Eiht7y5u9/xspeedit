@@ -1,4 +1,4 @@
-package org.java;
+package org.java.util;
 
 /**
  * Exception thrown when an attempt is made to create an product with an uncompliant product weight
