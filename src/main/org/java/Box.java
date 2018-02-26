@@ -34,7 +34,7 @@ public class Box {
 	int productWeight = p.getWeight();
 	int currentWeight = this.getTotalWeight();
 	int futureWeight = currentWeight + productWeight;
-	if (futureWeight < Constant.PRODUCT_MAXIMAL_WEIGHT) {
+	if (futureWeight <= Constant.PRODUCT_MAXIMAL_WEIGHT) {
 	    this.products.add(p);
 	    currentWeight = this.getTotalWeight();
 	    WeightHelper.checkWeight(currentWeight, Constant.PRODUCT_MAXIMAL_WEIGHT);
