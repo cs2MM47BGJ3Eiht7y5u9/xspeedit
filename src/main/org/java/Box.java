@@ -13,7 +13,7 @@ public class Box {
     private ArrayList<Product> products;
 
     /**
-     * Construct an empty Box.
+     * Constructs an empty Box.
      */
     public Box() {
 	this.products = new ArrayList<>(); 
