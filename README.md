@@ -1,10 +1,15 @@
 XspeedIt
 ========
 
+### Exécution (jar)
+Il est de bon ton d'éviter les fichiers binaires dans les projets git. Vous trouverez donc le fichier jar résultant du code au commit 31eef2939ea94a1c1db0d62161f986e2c4c0fbc4 [sur ce lien](https://www.auzias.net/xspeedit.jar). L'exécution requiert un argument qui est le nombre d'articles à emballer.
+
 ### Supposition
 Pour développer ce test, il a été supposé que l'emballeur, [_wrapper_](src/main/org/java/Wrapper.java), n'était pas requis d'emballer les articles dans l'ordre de production mais disposait d'un espace de stockage pour optimiser. Cet espace de stockage n'est pas limité dans cette version et correspond au nombre d'articles à emballer.
 
 Déformation professionnelle oblige et ne connaissant pas les pratiques chez vous, j'ai codé en anglais.
+
+Dans l'affichage des résultat un nombre de cartons d'emballage est estimé, nommé `guessedBoxesNumber` [cf `Wrapper`](src/main/org/java/Wrapper.java#L45). Ce nombre de cartons est inférieur au nombre optimal de cartons mais peut servir comme référence. Ce nombre correspond au nombre de carton si les articles pouvait être coupés dans le but de remplir **tous** les cartons jusqu'à leur capacité maximale.
 
 ### Commentaires
 Je n'ai pas développé ce test avec mon vrai compte github de peur que mes supérieurs voient cette activité.
@@ -21,6 +26,8 @@ Vu que le projet était simple, que j'étais seul à programmer et n'avais pas d
  - [ ] laisser la possibilité à l'utilisateur de définir sa propre liste d'articles à emballer (soit en argument soit via `stdin`)
  - [ ] programmer un emballeur, [_wrapper_](src/main/org/java/Wrapper.java), orienté stream (qui ne pourrait donc pas trier --mais c'est un problème trivial--)
  - [ ] plus de tests (y en a-t-il un jour assez?)
+ - [ ] ajout d'un `CHANGELOG` (aucun livrable qui se respecte ne devrait être dépourvu de `CHANGELOG`)
+ - [ ] un `pom.xml` ou un `module.ivy` (plus pour la version et le nom que pour les dépendances)
 
 ---
 

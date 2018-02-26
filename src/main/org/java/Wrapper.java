@@ -44,11 +44,11 @@ public class Wrapper {
 
 	// Guess the minimal number of boxes (if product could be cut so **all** boxes could be full).
 	// This number is less than the optimized number of boxes.
-	int guessBoxNumber = 0;
+	int guessedBoxesNumber = 0;
 	for (Product product : products) {
-	    guessBoxNumber += product.getWeight();
+	    guessedBoxesNumber += product.getWeight();
 	}
-	guessBoxNumber /= 10;
+	guessedBoxesNumber /= 10;
 
 	// Initialization of the wrapping
 	ArrayList<Box> boxes = new ArrayList<>();
@@ -64,7 +64,7 @@ public class Wrapper {
 	} while (!products.isEmpty());
 
 	// Print all boxes
-	printBoxes(boxes, guessBoxNumber);
+	printBoxes(boxes, guessedBoxesNumber);
     }
 
     /**
@@ -108,7 +108,7 @@ public class Wrapper {
 	System.out.println();
     }
 
-    private void printBoxes(ArrayList<Box> boxes, int guessBoxNumber) {
+    private void printBoxes(ArrayList<Box> boxes, int guessedBoxesNumber) {
 	System.out.print("Boxes:\t ");
 	for (Box box : boxes) {
 	    for (Product product : box.getProducts()) {
@@ -116,11 +116,6 @@ public class Wrapper {
 	    }
 	    System.out.print(SEPARATOR);
 	}
-	System.out.println("\n" + boxes.size() + " boxes used (against " + guessBoxNumber + " guessed).");
-    }
-
-    public static void main(String[] args) {
-	Wrapper wrapper = new Wrapper();
-	wrapper.wrap(10000);
+	System.out.println("\n" + boxes.size() + " boxes used (against " + guessedBoxesNumber + " guessed).");
     }
 }
