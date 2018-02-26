@@ -8,7 +8,7 @@ import org.junit.Test;
 public class TestWeight {
 
     @Test
-    public void BoxTooHeavy() {
+    public void boxTooHeavy() {
 	Box box = new Box();
 	Product p = null;
 	try {
@@ -22,7 +22,7 @@ public class TestWeight {
     }
 
     @Test
-    public void ProductTooHeavy() {
+    public void productTooHeavy() {
 	boolean ex = false;
 	try {
 	    new Product(10);
@@ -33,7 +33,7 @@ public class TestWeight {
     }
 
     @Test
-    public void ProductTooLight() {
+    public void productTooLight() {
 	boolean ex = false;
 	try {
 	    new Product(0);
