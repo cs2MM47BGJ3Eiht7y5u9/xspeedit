@@ -1,6 +1,29 @@
 XspeedIt
 ========
 
+### Supposition
+Pour développer ce test, il a été supposé que l'emballeur, [_wrapper_](src/main/org/java/Wrapper.java), n'était pas requis d'emballer les articles dans l'ordre de production mais disposait d'un espace de stockage pour optimiser. Cet espace de stockage n'est pas limité dans cette version et correspond au nombre d'articles à emballer.
+
+Déformation professionnelle oblige et ne connaissant pas les pratiques chez vous, j'ai codé en anglais.
+
+### Commentaires
+Je n'ai pas développé ce test avec mon vrai compte github de peur que mes supérieurs voient cette activité.
+
+Les commits ont été signés avec une nouvelle clef gpg, temporaire.
+
+Vu que le projet était simple, que j'étais seul à programmer et n'avais pas de bug-tracking à disposition tous les commits ont été poussés sur `master` directement. Git-flow est à préférer dans des conditions différentes (PS : [désolé pour la PR involontaire](https://github.com/voyages-sncf-technologies/xspeedit/pull/6)).
+
+
+### Possibilités d'amélioration
+ - [ ] utiliser une propriété système pour le nombre d'articles à emballer
+ - [ ] utiliser une propriété système pour définir la capacité maximale de l'espace de stockage des articles (un produit emballé libérant alors un espace pour un nouvel article)
+ - [ ] utiliser une propriété système pour définir une graine, [_seed_](src/main/org/java/Producer.java#L19), pour l'aléatoire
+ - [ ] laisser la possibilité à l'utilisateur de définir sa propre liste d'articles à emballer (soit en argument soit via `stdin`)
+ - [ ] programmer un emballeur, [_wrapper_](src/main/org/java/Wrapper.java), orienté stream (qui ne pourrait donc pas trier --mais c'est un problème trivial--)
+ - [ ] plus de tests (y en a-t-il un jour assez?)
+
+---
+
 XspeedIt est une société d'import / export ayant robotisé toute sa chaîne d'emballage de colis.  
 Elle souhaite trouver un algorithme permettant à ses robots d'optimiser le nombre de cartons d'emballage utilisés.
 
