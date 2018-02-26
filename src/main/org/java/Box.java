@@ -31,7 +31,7 @@ public class Box {
 	int productWeight = p.getWeight();
 	int currentWeight = this.getTotalWeight();
 	int futureWeight = currentWeight + productWeight;
-	if (futureWeight <= Constant.PRODUCT_MAXIMAL_WEIGHT) {
+	if (futureWeight <= Constant.BOX_MAXIMAL_WEIGHT) {
 	    this.products.add(p);
 	    currentWeight = this.getTotalWeight();
 	    ret = true;
@@ -49,5 +49,9 @@ public class Box {
 	    summedWeight += p.getWeight();
 	}
 	return summedWeight;
+    }
+
+    public ArrayList<Product> getProducts() {
+	return this.products;
     }
 }
