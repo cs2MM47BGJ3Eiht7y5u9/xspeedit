@@ -2,7 +2,7 @@ XspeedIt
 ========
 
 ### Exécution (jar)
-Il est de bon ton d'éviter les fichiers binaires dans les projets git. Vous trouverez donc le fichier jar résultant du code au commit https://github.com/cs2MM47BGJ3Eiht7y5u9/xspeedit/commit/31eef2939ea94a1c1db0d62161f986e2c4c0fbc4 [sur ce lien](https://www.auzias.net/xspeedit.jar). L'exécution requiert un argument qui est le nombre d'articles à emballer.
+Il est de bon ton d'éviter les fichiers binaires dans les projets git. Vous trouverez donc le fichier jar résultant du code au commit [31eef29](https://github.com/cs2MM47BGJ3Eiht7y5u9/xspeedit/commit/31eef2939ea94a1c1db0d62161f986e2c4c0fbc4) sur ce lien : [xspeedit.jar](https://www.auzias.net/xspeedit.jar). L'exécution requiert un argument qui est le nombre d'articles à emballer.
 
 ### Supposition
 Pour développer ce test, il a été supposé que l'emballeur, [_wrapper_](src/main/org/java/Wrapper.java), n'était pas requis d'emballer les articles dans l'ordre de production mais disposait d'un espace de stockage pour optimiser. Cet espace de stockage n'est pas limité dans cette version et correspond au nombre d'articles à emballer.
