@@ -26,7 +26,7 @@ public class Wrapper {
     /**
      * Wraps a given number of product.
      * @param numberOfProduct
-     * @throws IllegalWeightException 
+     * @throws IllegalWeightException
      */
     public void wrap(int numberOfProduct) {
 	if (numberOfProduct <= 0) throw new IllegalArgumentException("numberOfProduct must be stricly positive.");
@@ -52,15 +52,13 @@ public class Wrapper {
 
 	// Initialization of the wrapping
 	ArrayList<Box> boxes = new ArrayList<>();
-	int boxIdx = -1;
 
 	// Wrapping algorithm: a box is first filled with as many as heavy product and then with light product
 	do {
-	    boxes.add(new Box());
-	    boxIdx++;
-	    Box currentBox = boxes.get(boxIdx);
+	    Box currentBox = new Box();
 	    fillBox(products, currentBox, HEAVY_PRODUCT);
 	    fillBox(products, currentBox, LIGHT_PRODUCT);
+    	boxes.add(currentBox);
 	} while (!products.isEmpty());
 
 	// Print all boxes
@@ -77,7 +75,7 @@ public class Wrapper {
 	    Box currentBox, boolean heavy) {
 	// If the list of product is already empty, do nothing
 	if (products.isEmpty()) return;
-	
+
 	// Set the idex of product to pick
 	int productIdx = -1;
 	if (heavy) {

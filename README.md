@@ -20,14 +20,25 @@ Vu que le projet était simple, que j'étais seul à programmer et n'avais pas d
 
 
 ### Possibilités d'amélioration
- - [ ] utiliser une propriété système pour le nombre d'articles à emballer
- - [ ] utiliser une propriété système pour définir la capacité maximale de l'espace de stockage des articles (un produit emballé libérant alors un espace pour un nouvel article)
- - [ ] utiliser une propriété système pour définir une graine, [_seed_](src/main/org/java/Producer.java#L19), pour l'aléatoire
- - [ ] laisser la possibilité à l'utilisateur de définir sa propre liste d'articles à emballer (soit en argument soit via `stdin`)
- - [ ] programmer un emballeur, [_wrapper_](src/main/org/java/Wrapper.java), orienté stream (qui ne pourrait donc pas trier --mais c'est un problème trivial--)
- - [ ] plus de tests (y en a-t-il un jour assez?)
- - [ ] ajout d'un `CHANGELOG` (aucun livrable qui se respecte ne devrait être dépourvu de `CHANGELOG`)
- - [ ] un `pom.xml` ou un `module.ivy` (plus pour la version et le nom que pour les dépendances)
+ - [ ] Utiliser une propriété système pour le nombre d'articles à emballer
+ - [ ] Utiliser une propriété système pour définir la capacité maximale de l'espace de stockage des articles (un produit emballé libérant alors un espace pour un nouvel article)
+ - [ ] Utiliser une propriété système pour définir une graine, [_seed_](src/main/org/java/Producer.java#L19), pour l'aléatoire
+ - [ ] Laisser la possibilité à l'utilisateur de définir sa propre liste d'articles à emballer (soit en argument soit via `stdin`)
+ - [ ] Programmer un emballeur, [_wrapper_](src/main/org/java/Wrapper.java), orienté stream (qui ne pourrait donc pas trier --mais c'est un problème trivial--)
+ - [ ] Développer plus de tests (y en a-t-il un jour assez?)
+ - [ ] Ajouter un `CHANGELOG` (aucun livrable qui se respecte ne devrait être dépourvu de `CHANGELOG`)
+ - [ ] Écrire un `pom.xml` ou un `module.ivy` (plus pour la version et le nom que pour les dépendances)
+ - [ ] Suivre la structure de projet Maven (`src/{main,test}/{java,resources}`)
+ - [ ] Découper la méthode [`public void wrap(int numberOfProduct)`](src/main/org/java/Wrapper.java#L31)
+ - [ ] Déclarer des `List` au lieu des `ArrayList`
+ - [ ] Déplacer la méthode [`private void fillBox(..)`](src/main/org/java/Wrapper.java#L74) en tant que méthode de l'objet `Box`, la renmomer en `fills`
+ - [ ] Comparer l'algorithme courrant avec un algorithme qui choisit les articles non pas avec les extrêmes de la liste (les plus lourds puis les plus légers) mais graduellement.
+ - [ ] Renommer des variables locales (comme `ret` ou bien `p`)
+ - [ ] Créer un attribut `totalWeight` à l'objet `Box` pour gagner en temps d'exécution
+ - [ ] Supprimer les `try-catch` des tests
+ - [ ] Faire une classe de test pour chaque classe
+ - [ ] Séparer le test `boxTooHeavy` en deux tests
+
 
 ---
 
